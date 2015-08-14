@@ -1,8 +1,8 @@
 # SAPEXporter, Export Users to SAP
 
 ## USage
-Simple example
-###{
+### Simple example
+```php
 <?php require_once('../src/Exporter.php');
 
 date_default_timezone_set( 'Europe/Moscow' );
@@ -19,3 +19,4 @@ $sfObj      = new SAPObj($user, 'ivanov', 'petrov', 'sidorov', $today);
 var_dump( Exporter::pull($sfObj->build(),$connector) );
 
 }
+```
