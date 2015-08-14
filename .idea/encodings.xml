@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/example/sample.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Exporter.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/SAPConn.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/SAPObj.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/SAPUser.php" charset="UTF-8" />
+  </component>
+</project>
