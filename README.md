@@ -1,2 +1,2 @@
-# Exports-User-to-SAP
-SOAP
+# SAPEXporter
+version 0.0.1
