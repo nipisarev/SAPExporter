@@ -12,4 +12,5 @@ $connector  = new SAPConn('C00****9T1', 'sfadmin', 'sfpass', 'https://api.succes
 $user       = new SAPUser('1', 'Ivan', 'Petrov', 'Andreevich', 'nipisarev@mail.ru', '18.07.1985', '10801');
 $sfObj      = new SAPObj($user, 'ivanov', 'petrov', 'sidorov', $today);
 
-var_dump( Exporter::pull($sfObj->build(),$connector) );
+
+Exporter::pull( $sfObj->build(), $connector );

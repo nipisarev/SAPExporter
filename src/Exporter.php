@@ -23,16 +23,24 @@ class Exporter {
      * @param SAPConn $conn
      * @return mixed
      */
-    public static function pull( SuccessFactorsStructSFObject $SFObject, SAPConn $conn){
+    static function pull( SuccessFactorsStructSFObject $SFObject, SAPConn $conn){
 
         //login
-        $successFactorsServiceLogin = new SuccessFactorsServiceLogin( $conn->get('wsdl') );
+        try {
+            $successFactorsServiceLogin = new SuccessFactorsServiceLogin($conn->get('wsdl'));
+        } catch ( Exception $e ){
+            die( $e->__toString() );
+        }
 
         if( !( $successFactorsServiceLogin->login( new SuccessFactorsStructLogin( $conn->get('credential') ) ) ) )
             self::$log = $successFactorsServiceLogin->getLastError();
 
         //export
-        $successFactorsServiceUpsert = new SuccessFactorsServiceUpsert( $conn->get('credential') );
+        try {
+            $successFactorsServiceUpsert = new SuccessFactorsServiceUpsert( $conn->get('credential') );
+        } catch ( Exception $e ){
+            die( $e->__toString() );
+        }
 
         if( $successFactorsServiceUpsert->upsert( new SuccessFactorsStructUpsert( 'user', $SFObject ) ) ) {
             self::$log = $successFactorsServiceUpsert->getResult();
@@ -41,7 +49,11 @@ class Exporter {
         }
 
         //logout
-        $successFactorsServiceLogout = new SuccessFactorsServiceLogout( $conn->get('credential') );
+        try {
+            $successFactorsServiceLogout = new SuccessFactorsServiceLogout( $conn->get('credential') );
+        } catch ( Exception $e ){
+            die( $e->__toString() );
+        }
 
         if( !( $successFactorsServiceLogout->logout() ) )
             self::$log = $successFactorsServiceLogout->getLastError();
