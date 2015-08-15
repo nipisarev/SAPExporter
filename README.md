@@ -1,5 +1,6 @@
 # SAPEXporter, Export Users to SAP
-use library https://www.wsdltophp.com/Wsdls/4747c892fc58b1b2a14b0756a20c003a/SuccessFactors-1-0-1-1-1-1-1-1-0-0
+use library WSDL to SOAP by Mikaël DELSOL
+https://www.wsdltophp.com/Wsdls/4747c892fc58b1b2a14b0756a20c003a/SuccessFactors-1-0-1-1-1-1-1-1-0-0
 
 ## USage
 ### Simple example
