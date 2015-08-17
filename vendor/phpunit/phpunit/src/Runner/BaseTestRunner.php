@@ -9,7 +9,7 @@
  */
 
 /**
- * Base class for all test runners.
+ * Base class for all tests runners.
  *
  * @since Class available since Release 2.0.0
  */
@@ -130,7 +130,7 @@ abstract class PHPUnit_Runner_BaseTestRunner
 
     /**
      * Override to define how to handle a failed loading of
-     * a test suite.
+     * a tests suite.
      *
      * @param string $message
      */

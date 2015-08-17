@@ -9,7 +9,7 @@
  */
 
 /**
- * Runner for PHPT test cases.
+ * Runner for PHPT tests cases.
  *
  * @since Class available since Release 3.1.4
  */
@@ -48,7 +48,7 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
     );
 
     /**
-     * Constructs a test case with the given filename.
+     * Constructs a tests case with the given filename.
      *
      * @param  string                      $filename
      * @throws PHPUnit_Framework_Exception
@@ -72,7 +72,7 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
     }
 
     /**
-     * Counts the number of test cases executed by run(TestResult result).
+     * Counts the number of tests cases executed by run(TestResult result).
      *
      * @return int
      */
@@ -82,7 +82,7 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
     }
 
     /**
-     * Runs a test and collects its result in a TestResult instance.
+     * Runs a tests and collects its result in a TestResult instance.
      *
      * @param  PHPUnit_Framework_TestResult $result
      * @return PHPUnit_Framework_TestResult
@@ -156,7 +156,7 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
     }
 
     /**
-     * Returns the name of the test case.
+     * Returns the name of the tests case.
      *
      * @return string
      */
@@ -166,7 +166,7 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
     }
 
     /**
-     * Returns a string representation of the test case.
+     * Returns a string representation of the tests case.
      *
      * @return string
      */

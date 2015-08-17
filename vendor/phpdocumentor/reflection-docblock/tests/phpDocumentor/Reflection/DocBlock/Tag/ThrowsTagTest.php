@@ -1,6 +1,6 @@
 <?php
 /**
- * phpDocumentor Throws tag test.
+ * phpDocumentor Throws tag tests.
  * 
  * PHP version 5.3
  *

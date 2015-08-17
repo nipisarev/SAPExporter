@@ -3,7 +3,7 @@
 class Issue498Test extends PHPUnit_Framework_TestCase
 {
     /**
-     * @test
+     * @tests
      * @dataProvider shouldBeTrueDataProvider
      * @group falseOnly
      */
@@ -13,7 +13,7 @@ class Issue498Test extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @dataProvider shouldBeFalseDataProvider
      * @group trueOnly
      */

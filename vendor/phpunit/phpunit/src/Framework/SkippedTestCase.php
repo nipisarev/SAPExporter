@@ -9,7 +9,7 @@
  */
 
 /**
- * A skipped test case
+ * A skipped tests case
  *
  * @since Class available since Release 4.3.0
  */
@@ -71,7 +71,7 @@ class PHPUnit_Framework_SkippedTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Returns a string representation of the test case.
+     * Returns a string representation of the tests case.
      *
      * @return string
      */

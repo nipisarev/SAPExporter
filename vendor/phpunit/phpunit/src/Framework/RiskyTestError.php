@@ -10,7 +10,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of a risky test.
+ * case of a risky tests.
  *
  * @since Class available since Release 4.0.0
  */

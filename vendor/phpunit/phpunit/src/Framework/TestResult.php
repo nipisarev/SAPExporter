@@ -9,7 +9,7 @@
  */
 
 /**
- * A TestResult collects the results of executing a test case.
+ * A TestResult collects the results of executing a tests case.
  *
  * @since Class available since Release 2.0.0
  */
@@ -312,7 +312,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Informs the result that a test will be started.
+     * Informs the result that a tests will be started.
      *
      * @param PHPUnit_Framework_Test $test
      */
@@ -327,7 +327,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Informs the result that a test was completed.
+     * Informs the result that a tests was completed.
      *
      * @param PHPUnit_Framework_Test $test
      * @param float                  $time
@@ -355,7 +355,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Returns true if no risky test occurred.
+     * Returns true if no risky tests occurred.
      *
      * @return bool
      * @since  Method available since Release 4.0.0
@@ -377,7 +377,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Returns true if no incomplete test occurred.
+     * Returns true if no incomplete tests occurred.
      *
      * @return bool
      */
@@ -418,7 +418,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Returns true if no test has been skipped.
+     * Returns true if no tests has been skipped.
      *
      * @return bool
      * @since  Method available since Release 3.0.0
@@ -502,7 +502,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Returns the (top) test suite.
+     * Returns the (top) tests suite.
      *
      * @return PHPUnit_Framework_TestSuite
      * @since  Method available since Release 3.0.0
@@ -560,7 +560,7 @@ class PHPUnit_Framework_TestResult implements Countable
                                !$test instanceof PHPUnit_Framework_Warning;
 
         if ($collectCodeCoverage) {
-            // We need to blacklist test source files when no whitelist is used.
+            // We need to blacklist tests source files when no whitelist is used.
             if (!$this->codeCoverage->filter()->hasWhitelist()) {
                 $classes = $this->getHierarchy(get_class($test), true);
 
@@ -655,7 +655,7 @@ class PHPUnit_Framework_TestResult implements Countable
                 $this->addFailure(
                     $test,
                     new PHPUnit_Framework_UnintentionallyCoveredCodeError(
-                        'This test executed code that is not listed as code to be covered or used:' .
+                        'This tests executed code that is not listed as code to be covered or used:' .
                         PHP_EOL . $cce->getMessage()
                     ),
                     $time
@@ -690,7 +690,7 @@ class PHPUnit_Framework_TestResult implements Countable
             $this->addFailure(
                 $test,
                 new PHPUnit_Framework_RiskyTestError(
-                    'This test did not perform any assertions'
+                    'This tests did not perform any assertions'
                 ),
                 $time
             );
@@ -699,7 +699,7 @@ class PHPUnit_Framework_TestResult implements Countable
                 $test,
                 new PHPUnit_Framework_OutputError(
                     sprintf(
-                        'This test printed output: %s',
+                        'This tests printed output: %s',
                         $test->getActualOutput()
                     )
                 ),
@@ -733,7 +733,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Checks whether the test run should stop.
+     * Checks whether the tests run should stop.
      *
      * @return bool
      */
@@ -743,7 +743,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Marks that the test run should stop.
+     * Marks that the tests run should stop.
      */
     public function stop()
     {
@@ -982,7 +982,7 @@ class PHPUnit_Framework_TestResult implements Countable
     }
 
     /**
-     * Returns whether the entire test was successful or not.
+     * Returns whether the entire tests was successful or not.
      *
      * @return bool
      */

@@ -31,7 +31,7 @@ class PHPUnit_Util_TestDox_NamePrettifier
     protected $strings = array();
 
     /**
-     * Prettifies the name of a test class.
+     * Prettifies the name of a tests class.
      *
      * @param  string $name
      * @return string
@@ -58,7 +58,7 @@ class PHPUnit_Util_TestDox_NamePrettifier
     }
 
     /**
-     * Prettifies the name of a test method.
+     * Prettifies the name of a tests method.
      *
      * @param  string $name
      * @return string
@@ -85,7 +85,7 @@ class PHPUnit_Util_TestDox_NamePrettifier
 
         $max = strlen($name);
 
-        if (substr($name, 0, 4) == 'test') {
+        if (substr($name, 0, 4) == 'tests') {
             $offset = 4;
         } else {
             $offset  = 0;
@@ -119,7 +119,7 @@ class PHPUnit_Util_TestDox_NamePrettifier
     }
 
     /**
-     * Sets the prefix of test names.
+     * Sets the prefix of tests names.
      *
      * @param string $prefix
      */
@@ -129,7 +129,7 @@ class PHPUnit_Util_TestDox_NamePrettifier
     }
 
     /**
-     * Sets the suffix of test names.
+     * Sets the suffix of tests names.
      *
      * @param string $suffix
      */

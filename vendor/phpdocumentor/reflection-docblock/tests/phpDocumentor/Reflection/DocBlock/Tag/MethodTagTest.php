@@ -23,7 +23,7 @@ namespace phpDocumentor\Reflection\DocBlock\Tag;
 class MethodTagTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @param string $signature       The signature to test.
+     * @param string $signature       The signature to tests.
      * @param bool   $valid           Whether the given signature is expected to
      *     be valid.
      * @param string $expected_name   The method name that is expected from this

@@ -293,7 +293,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
      */
     protected function printIncompletes(PHPUnit_Framework_TestResult $result)
     {
-        $this->printDefects($result->notImplemented(), 'incomplete test');
+        $this->printDefects($result->notImplemented(), 'incomplete tests');
     }
 
     /**
@@ -302,7 +302,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
      */
     protected function printRisky(PHPUnit_Framework_TestResult $result)
     {
-        $this->printDefects($result->risky(), 'risky test');
+        $this->printDefects($result->risky(), 'risky tests');
     }
 
     /**
@@ -311,7 +311,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
      */
     protected function printSkipped(PHPUnit_Framework_TestResult $result)
     {
-        $this->printDefects($result->skipped(), 'skipped test');
+        $this->printDefects($result->skipped(), 'skipped tests');
     }
 
     protected function printHeader()
@@ -336,7 +336,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
             $this->writeWithColor(
                 'fg-black, bg-green',
                 sprintf(
-                    'OK (%d test%s, %d assertion%s)',
+                    'OK (%d tests%s, %d assertion%s)',
                     count($result),
                     (count($result) == 1) ? '' : 's',
                     $this->numAssertions,
@@ -407,7 +407,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
     }
 
     /**
-     * Incomplete test.
+     * Incomplete tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -420,7 +420,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
     }
 
     /**
-     * Risky test.
+     * Risky tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -434,7 +434,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
     }
 
     /**
-     * Skipped test.
+     * Skipped tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -473,7 +473,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
     }
 
     /**
-     * A test started.
+     * A tests started.
      *
      * @param PHPUnit_Framework_Test $test
      */
@@ -482,7 +482,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
         if ($this->debug) {
             $this->write(
                 sprintf(
-                    "\nStarting test '%s'.\n",
+                    "\nStarting tests '%s'.\n",
                     PHPUnit_Util_Test::describe($test)
                 )
             );
@@ -490,7 +490,7 @@ class PHPUnit_TextUI_ResultPrinter extends PHPUnit_Util_Printer implements PHPUn
     }
 
     /**
-     * A test ended.
+     * A tests ended.
      *
      * @param PHPUnit_Framework_Test $test
      * @param float                  $time

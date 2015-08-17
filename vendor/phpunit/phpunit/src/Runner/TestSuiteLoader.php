@@ -9,7 +9,7 @@
  */
 
 /**
- * An interface to define how a test suite should be loaded.
+ * An interface to define how a tests suite should be loaded.
  *
  * @since      Interface available since Release 2.0.0
  */

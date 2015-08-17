@@ -9,7 +9,7 @@
  */
 
 /**
- * A TestListener that generates a logfile of the test execution in XML markup.
+ * A TestListener that generates a logfile of the tests execution in XML markup.
  *
  * The XML markup used is the same as the one that is used by the JUnit Ant task.
  *
@@ -184,7 +184,7 @@ class PHPUnit_Util_Log_JUnit extends PHPUnit_Util_Printer implements PHPUnit_Fra
     }
 
     /**
-     * Incomplete test.
+     * Incomplete tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -212,7 +212,7 @@ class PHPUnit_Util_Log_JUnit extends PHPUnit_Util_Printer implements PHPUnit_Fra
     }
 
     /**
-     * Risky test.
+     * Risky tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -241,7 +241,7 @@ class PHPUnit_Util_Log_JUnit extends PHPUnit_Util_Printer implements PHPUnit_Fra
     }
 
     /**
-     * Skipped test.
+     * Skipped tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -349,7 +349,7 @@ class PHPUnit_Util_Log_JUnit extends PHPUnit_Util_Printer implements PHPUnit_Fra
     }
 
     /**
-     * A test started.
+     * A tests started.
      *
      * @param PHPUnit_Framework_Test $test
      */
@@ -375,7 +375,7 @@ class PHPUnit_Util_Log_JUnit extends PHPUnit_Util_Printer implements PHPUnit_Fra
     }
 
     /**
-     * A test ended.
+     * A tests ended.
      *
      * @param PHPUnit_Framework_Test $test
      * @param float                  $time

@@ -844,7 +844,7 @@ class SuccessFactorsWsdlClass extends stdClass implements ArrayAccess,Iterator,C
 	}
 	/**
 	 * Generic method telling if current value is valid according to the attribute setted with the current value
-	 * @param mixed $_value the value to test
+	 * @param mixed $_value the value to tests
 	 * @return bool true|false
 	 */
 	public static function valueIsValid($_value)

@@ -10,7 +10,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of a skipped test suite.
+ * case of a skipped tests suite.
  *
  * @since Class available since Release 3.1.0
  */

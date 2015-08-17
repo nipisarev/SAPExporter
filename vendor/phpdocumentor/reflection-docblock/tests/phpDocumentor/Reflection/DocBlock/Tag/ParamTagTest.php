@@ -1,6 +1,6 @@
 <?php
 /**
- * phpDocumentor Param tag test.
+ * phpDocumentor Param tag tests.
  * 
  * PHP version 5.3
  *

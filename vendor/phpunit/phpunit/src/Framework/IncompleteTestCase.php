@@ -9,7 +9,7 @@
  */
 
 /**
- * An incomplete test case
+ * An incomplete tests case
  *
  * @since Class available since Release 4.3.0
  */
@@ -73,7 +73,7 @@ class PHPUnit_Framework_IncompleteTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Returns a string representation of the test case.
+     * Returns a string representation of the tests case.
      *
      * @return string
      */

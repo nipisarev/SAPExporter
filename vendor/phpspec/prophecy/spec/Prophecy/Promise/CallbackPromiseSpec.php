@@ -74,7 +74,7 @@ class CallbackPromiseSpec extends ObjectBehavior
 }
 
 /**
- * Class used to test callbackpromise
+ * Class used to tests callbackpromise
  *
  * @param array
  * @return string
@@ -99,7 +99,7 @@ class ClassCallback
 }
 
 /**
- * Callback function used to test callbackpromise
+ * Callback function used to tests callbackpromise
  *
  * @param array
  * @return string

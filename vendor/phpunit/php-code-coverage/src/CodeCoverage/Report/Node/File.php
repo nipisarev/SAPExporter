@@ -144,7 +144,7 @@ class PHP_CodeCoverage_Report_Node_File extends PHP_CodeCoverage_Report_Node
     }
 
     /**
-     * Returns the test data of this node.
+     * Returns the tests data of this node.
      *
      * @return array
      */

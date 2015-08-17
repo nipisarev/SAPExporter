@@ -2849,7 +2849,7 @@ abstract class PHPUnit_Framework_Assert
         return new PHPUnit_Framework_Constraint_Count($count);
     }
     /**
-     * Fails a test with the given message.
+     * Fails a tests with the given message.
      *
      * @param  string                                 $message
      * @throws PHPUnit_Framework_AssertionFailedError
@@ -3010,7 +3010,7 @@ abstract class PHPUnit_Framework_Assert
     }
 
     /**
-     * Mark the test as incomplete.
+     * Mark the tests as incomplete.
      *
      * @param  string                                $message
      * @throws PHPUnit_Framework_IncompleteTestError
@@ -3022,7 +3022,7 @@ abstract class PHPUnit_Framework_Assert
     }
 
     /**
-     * Mark the test as skipped.
+     * Mark the tests as skipped.
      *
      * @param  string                             $message
      * @throws PHPUnit_Framework_SkippedTestError

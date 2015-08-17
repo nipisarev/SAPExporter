@@ -1,6 +1,6 @@
 <?php
 /**
- * phpDocumentor Return tag test.
+ * phpDocumentor Return tag tests.
  * 
  * PHP version 5.3
  *

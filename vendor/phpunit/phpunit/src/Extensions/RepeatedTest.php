@@ -9,7 +9,7 @@
  */
 
 /**
- * A Decorator that runs a test repeatedly.
+ * A Decorator that runs a tests repeatedly.
  *
  * @since Class available since Release 2.0.0
  */
@@ -49,8 +49,8 @@ class PHPUnit_Extensions_RepeatedTest extends PHPUnit_Extensions_TestDecorator
     }
 
     /**
-     * Counts the number of test cases that
-     * will be run by this test.
+     * Counts the number of tests cases that
+     * will be run by this tests.
      *
      * @return int
      */
@@ -60,7 +60,7 @@ class PHPUnit_Extensions_RepeatedTest extends PHPUnit_Extensions_TestDecorator
     }
 
     /**
-     * Runs the decorated test and collects the
+     * Runs the decorated tests and collects the
      * result in a TestResult.
      *
      * @param  PHPUnit_Framework_TestResult $result

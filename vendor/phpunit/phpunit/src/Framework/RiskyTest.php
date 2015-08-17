@@ -10,7 +10,7 @@
 
 /**
  * A marker interface for marking any exception/error as result of an unit
- * test as risky.
+ * tests as risky.
  *
  * @since      Interface available since Release 4.0.0
  */

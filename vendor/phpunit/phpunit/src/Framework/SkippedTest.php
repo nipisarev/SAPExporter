@@ -9,7 +9,7 @@
  */
 
 /**
- * A marker interface for marking a unit test as being skipped.
+ * A marker interface for marking a unit tests as being skipped.
  *
  * @since      Interface available since Release 3.0.0
  */

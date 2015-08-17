@@ -24,10 +24,10 @@ use Prophecy\Prophet;
  *   1) Implement a subclass of PHPUnit_Framework_TestCase.
  *   2) Define instance variables that store the state of the fixture.
  *   3) Initialize the fixture state by overriding setUp().
- *   4) Clean-up after a test by overriding tearDown().
+ *   4) Clean-up after a tests by overriding tearDown().
  *
- * Each test runs in its own fixture so there can be no side effects
- * among test runs.
+ * Each tests runs in its own fixture so there can be no side effects
+ * among tests runs.
  *
  * Here is an example:
  *
@@ -47,7 +47,7 @@ use Prophecy\Prophet;
  * ?>
  * </code>
  *
- * For each test implement a method which interacts with the fixture.
+ * For each tests implement a method which interacts with the fixture.
  * Verify the expected results with assertions specified by calling
  * assert with a boolean.
  *
@@ -93,14 +93,14 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     protected $backupStaticAttributesBlacklist = array();
 
     /**
-     * Whether or not this test is to be run in a separate PHP process.
+     * Whether or not this tests is to be run in a separate PHP process.
      *
      * @var bool
      */
     protected $runTestInSeparateProcess = null;
 
     /**
-     * Whether or not this test should preserve the global state when
+     * Whether or not this tests should preserve the global state when
      * running in a separate PHP process.
      *
      * @var bool
@@ -108,7 +108,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     protected $preserveGlobalState = true;
 
     /**
-     * Whether or not this test is running in a separate PHP process.
+     * Whether or not this tests is running in a separate PHP process.
      *
      * @var bool
      */
@@ -158,7 +158,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     private $expectedExceptionCode;
 
     /**
-     * The name of the test case.
+     * The name of the tests case.
      *
      * @var string
      */
@@ -265,7 +265,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     private $disallowChangesToGlobalState = false;
 
     /**
-     * Constructs a test case with the given name.
+     * Constructs a tests case with the given name.
      *
      * @param string $name
      * @param array  $data
@@ -282,7 +282,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Returns a string representation of the test case.
+     * Returns a string representation of the tests case.
      *
      * @return string
      */
@@ -300,7 +300,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Counts the number of test cases executed by run(TestResult result).
+     * Counts the number of tests cases executed by run(TestResult result).
      *
      * @return int
      */
@@ -310,7 +310,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Returns the annotations for this test.
+     * Returns the annotations for this tests.
      *
      * @return array
      * @since Method available since Release 3.4.0
@@ -339,7 +339,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Returns the size of the test.
+     * Returns the size of the tests.
      *
      * @return int
      * @since  Method available since Release 3.6.0
@@ -544,7 +544,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Returns the status of this test.
+     * Returns the status of this tests.
      *
      * @return int
      * @since  Method available since Release 3.1.0
@@ -555,7 +555,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Returns the status message of this test.
+     * Returns the status message of this tests.
      *
      * @return string
      * @since  Method available since Release 3.3.0
@@ -566,7 +566,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Returns whether or not this test has failed.
+     * Returns whether or not this tests has failed.
      *
      * @return bool
      * @since  Method available since Release 3.0.0
@@ -580,7 +580,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Runs the test case and collects the results in a TestResult object.
+     * Runs the tests case and collects the results in a TestResult object.
      * If no TestResult object is passed a new one will be created.
      *
      * @param  PHPUnit_Framework_TestResult $result
@@ -712,7 +712,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Runs the bare test sequence.
+     * Runs the bare tests sequence.
      */
     public function runBare()
     {
@@ -853,7 +853,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Override to run the test and assert its state.
+     * Override to run the tests and assert its state.
      *
      * @return mixed
      * @throws Exception|PHPUnit_Framework_Exception
@@ -1181,7 +1181,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     /**
      * This method is a wrapper for the ini_set() function that automatically
      * resets the modified php.ini setting to its original value after the
-     * test is run.
+     * tests is run.
      *
      * @param  string                      $varName
      * @param  string                      $newValue
@@ -1211,7 +1211,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
 
     /**
      * This method is a wrapper for the setlocale() function that automatically
-     * resets the locale to its original value after the test is run.
+     * resets the locale to its original value after the tests is run.
      *
      * @param  int                         $category
      * @param  string                      $locale
@@ -1263,14 +1263,14 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
      *
      * @param  string                                  $originalClassName       Name of the class to mock.
      * @param  array|null                              $methods                 When provided, only methods whose names are in the array
-     *                                                                          are replaced with a configurable test double. The behavior
+     *                                                                          are replaced with a configurable tests double. The behavior
      *                                                                          of the other methods is not changed.
      *                                                                          Providing null means that no methods will be replaced.
      * @param  array                                   $arguments               Parameters to pass to the original class' constructor.
-     * @param  string                                  $mockClassName           Class name for the generated test double class.
+     * @param  string                                  $mockClassName           Class name for the generated tests double class.
      * @param  bool                                    $callOriginalConstructor Can be used to disable the call to the original class' constructor.
      * @param  bool                                    $callOriginalClone       Can be used to disable the call to the original class' clone constructor.
-     * @param  bool                                    $callAutoload            Can be used to disable __autoload() during the generation of the test double class.
+     * @param  bool                                    $callAutoload            Can be used to disable __autoload() during the generation of the tests double class.
      * @param  bool                                    $cloneArguments
      * @param  bool                                    $callOriginalMethods
      * @return PHPUnit_Framework_MockObject_MockObject
@@ -1499,7 +1499,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Returns the number of assertions performed by this test.
+     * Returns the number of assertions performed by this tests.
      *
      * @return int
      * @since  Method available since Release 3.3.0
@@ -1756,7 +1756,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
                         $this,
                         new PHPUnit_Framework_SkippedTestError(
                             sprintf(
-                                'This test depends on "%s" to pass.',
+                                'This tests depends on "%s" to pass.',
                                 $dependency
                             )
                         ),
@@ -1773,7 +1773,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
                         $this->result->addError(
                             $this,
                             new PHPUnit_Framework_SkippedTestError(
-                                'This test depends on a test that is larger than itself.'
+                                'This tests depends on a tests that is larger than itself.'
                             ),
                             0
                         );
@@ -1792,7 +1792,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * This method is called before the first test of this test class is run.
+     * This method is called before the first tests of this tests class is run.
      *
      * @since Method available since Release 3.4.0
      */
@@ -1802,16 +1802,16 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
 
     /**
      * Sets up the fixture, for example, open a network connection.
-     * This method is called before a test is executed.
+     * This method is called before a tests is executed.
      */
     protected function setUp()
     {
     }
 
     /**
-     * Performs assertions shared by all tests of a test case.
+     * Performs assertions shared by all tests of a tests case.
      *
-     * This method is called before the execution of a test starts
+     * This method is called before the execution of a tests starts
      * and after setUp() is called.
      *
      * @since  Method available since Release 3.2.8
@@ -1821,9 +1821,9 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Performs assertions shared by all tests of a test case.
+     * Performs assertions shared by all tests of a tests case.
      *
-     * This method is called before the execution of a test ends
+     * This method is called before the execution of a tests ends
      * and before tearDown() is called.
      *
      * @since  Method available since Release 3.2.8
@@ -1834,14 +1834,14 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
 
     /**
      * Tears down the fixture, for example, close a network connection.
-     * This method is called after a test is executed.
+     * This method is called after a tests is executed.
      */
     protected function tearDown()
     {
     }
 
     /**
-     * This method is called after the last test of this test class is run.
+     * This method is called after the last tests of this tests class is run.
      *
      * @since Method available since Release 3.4.0
      */
@@ -1850,7 +1850,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * This method is called when a test method did not execute successfully.
+     * This method is called when a tests method did not execute successfully.
      *
      * @param Exception $e
      * @since Method available since Release 3.4.0
@@ -2029,13 +2029,13 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
             $this->compareGlobalStateSnapshotPart(
                 $before->globalVariables(),
                 $after->globalVariables(),
-                "--- Global variables before the test\n+++ Global variables after the test\n"
+                "--- Global variables before the tests\n+++ Global variables after the tests\n"
             );
 
             $this->compareGlobalStateSnapshotPart(
                 $before->superGlobalVariables(),
                 $after->superGlobalVariables(),
-                "--- Super-global variables before the test\n+++ Super-global variables after the test\n"
+                "--- Super-global variables before the tests\n+++ Super-global variables after the tests\n"
             );
         }
 
@@ -2043,7 +2043,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
             $this->compareGlobalStateSnapshotPart(
                 $before->staticAttributes(),
                 $after->staticAttributes(),
-                "--- Static attributes before the test\n+++ Static attributes after the test\n"
+                "--- Static attributes before the tests\n+++ Static attributes after the tests\n"
             );
         }
     }

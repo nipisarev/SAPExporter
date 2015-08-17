@@ -9,7 +9,7 @@
  */
 
 /**
- * A Listener for test progress.
+ * A Listener for tests progress.
  *
  * @since      Interface available since Release 2.0.0
  */
@@ -34,7 +34,7 @@ interface PHPUnit_Framework_TestListener
     public function addFailure(PHPUnit_Framework_Test $test, PHPUnit_Framework_AssertionFailedError $e, $time);
 
     /**
-     * Incomplete test.
+     * Incomplete tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -43,7 +43,7 @@ interface PHPUnit_Framework_TestListener
     public function addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time);
 
     /**
-     * Risky test.
+     * Risky tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -53,7 +53,7 @@ interface PHPUnit_Framework_TestListener
     public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time);
 
     /**
-     * Skipped test.
+     * Skipped tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -63,7 +63,7 @@ interface PHPUnit_Framework_TestListener
     public function addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time);
 
     /**
-     * A test suite started.
+     * A tests suite started.
      *
      * @param PHPUnit_Framework_TestSuite $suite
      * @since  Method available since Release 2.2.0
@@ -71,7 +71,7 @@ interface PHPUnit_Framework_TestListener
     public function startTestSuite(PHPUnit_Framework_TestSuite $suite);
 
     /**
-     * A test suite ended.
+     * A tests suite ended.
      *
      * @param PHPUnit_Framework_TestSuite $suite
      * @since  Method available since Release 2.2.0
@@ -79,14 +79,14 @@ interface PHPUnit_Framework_TestListener
     public function endTestSuite(PHPUnit_Framework_TestSuite $suite);
 
     /**
-     * A test started.
+     * A tests started.
      *
      * @param PHPUnit_Framework_Test $test
      */
     public function startTest(PHPUnit_Framework_Test $test);
 
     /**
-     * A test ended.
+     * A tests ended.
      *
      * @param PHPUnit_Framework_Test $test
      * @param float                  $time

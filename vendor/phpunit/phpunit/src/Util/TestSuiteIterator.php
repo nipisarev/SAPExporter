@@ -9,7 +9,7 @@
  */
 
 /**
- * Iterator for test suites.
+ * Iterator for tests suites.
  *
  * @since Class available since Release 3.1.0
  */

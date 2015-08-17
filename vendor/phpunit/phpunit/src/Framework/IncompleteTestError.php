@@ -10,7 +10,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of an incomplete test.
+ * case of an incomplete tests.
  *
  * @since Class available since Release 2.0.0
  */

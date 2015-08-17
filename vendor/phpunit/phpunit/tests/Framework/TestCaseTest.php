@@ -154,7 +154,7 @@ class Framework_TestCaseTest extends PHPUnit_Framework_TestCase
 
     public function testException()
     {
-        $test = new ThrowExceptionTestCase('test');
+        $test = new ThrowExceptionTestCase('tests');
         $test->setExpectedException('RuntimeException');
 
         $result = $test->run();
@@ -165,7 +165,7 @@ class Framework_TestCaseTest extends PHPUnit_Framework_TestCase
 
     public function testExceptionWithMessage()
     {
-        $test = new ThrowExceptionTestCase('test');
+        $test = new ThrowExceptionTestCase('tests');
         $test->setExpectedException('RuntimeException', 'A runtime error occurred');
 
         $result = $test->run();
@@ -176,7 +176,7 @@ class Framework_TestCaseTest extends PHPUnit_Framework_TestCase
 
     public function testExceptionWithWrongMessage()
     {
-        $test = new ThrowExceptionTestCase('test');
+        $test = new ThrowExceptionTestCase('tests');
         $test->setExpectedException('RuntimeException', 'A logic error occurred');
 
         $result = $test->run();
@@ -191,7 +191,7 @@ class Framework_TestCaseTest extends PHPUnit_Framework_TestCase
 
     public function testExceptionWithRegexpMessage()
     {
-        $test = new ThrowExceptionTestCase('test');
+        $test = new ThrowExceptionTestCase('tests');
         $test->setExpectedExceptionRegExp('RuntimeException', '/runtime .*? occurred/');
 
         $result = $test->run();
@@ -202,7 +202,7 @@ class Framework_TestCaseTest extends PHPUnit_Framework_TestCase
 
     public function testExceptionWithWrongRegexpMessage()
     {
-        $test = new ThrowExceptionTestCase('test');
+        $test = new ThrowExceptionTestCase('tests');
         $test->setExpectedExceptionRegExp('RuntimeException', '/logic .*? occurred/');
 
         $result = $test->run();
@@ -220,7 +220,7 @@ class Framework_TestCaseTest extends PHPUnit_Framework_TestCase
      */
     public function testExceptionWithInvalidRegexpMessage()
     {
-        $test = new ThrowExceptionTestCase('test');
+        $test = new ThrowExceptionTestCase('tests');
         $test->setExpectedExceptionRegExp('RuntimeException', '#runtime .*? occurred/'); // wrong delimiter
 
         $result = $test->run();
@@ -233,7 +233,7 @@ class Framework_TestCaseTest extends PHPUnit_Framework_TestCase
 
     public function testNoException()
     {
-        $test = new ThrowNoExceptionTestCase('test');
+        $test = new ThrowNoExceptionTestCase('tests');
         $test->setExpectedException('RuntimeException');
 
         $result = $test->run();
@@ -244,7 +244,7 @@ class Framework_TestCaseTest extends PHPUnit_Framework_TestCase
 
     public function testWrongException()
     {
-        $test = new ThrowExceptionTestCase('test');
+        $test = new ThrowExceptionTestCase('tests');
         $test->setExpectedException('InvalidArgumentException');
 
         $result = $test->run();

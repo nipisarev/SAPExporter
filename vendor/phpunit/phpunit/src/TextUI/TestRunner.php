@@ -89,7 +89,7 @@ class PHPUnit_TextUI_TestRunner extends PHPUnit_Runner_BaseTestRunner
             );
         } else {
             throw new PHPUnit_Framework_Exception(
-                'No test case or test suite found.'
+                'No tests case or tests suite found.'
             );
         }
     }
@@ -542,7 +542,7 @@ class PHPUnit_TextUI_TestRunner extends PHPUnit_Runner_BaseTestRunner
 
     /**
      * Override to define how to handle a failed loading of
-     * a test suite.
+     * a tests suite.
      *
      * @param string $message
      */

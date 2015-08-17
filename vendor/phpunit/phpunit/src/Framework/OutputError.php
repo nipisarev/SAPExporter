@@ -10,7 +10,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of a test that printed output.
+ * case of a tests that printed output.
  *
  * @since Class available since Release 3.6.0
  */

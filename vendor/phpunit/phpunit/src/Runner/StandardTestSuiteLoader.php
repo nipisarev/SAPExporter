@@ -9,7 +9,7 @@
  */
 
 /**
- * The standard test suite loader.
+ * The standard tests suite loader.
  *
  * @since Class available since Release 2.0.0
  */
